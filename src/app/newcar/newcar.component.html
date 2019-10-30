@@ -1,0 +1,59 @@
+<style media="screen">
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }
+
+  .main-style{
+    position:absolute;
+    top: 300px;
+    width: 200px;
+    left: 300px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .box-style{
+    width: 200px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .create-new-car{
+    position:relative;
+    top: -10px;
+    left: 30px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .createbutton-style{
+    position:absolute;
+    left: 70px;
+  }
+</style>
+
+<div>
+  <form [formGroup]= "newcarForm">
+    <div class="main-style">
+      <h3 class="create-new-car"> Create Car Profile </h3>
+      <div>
+        <input formControlName="carbrand" class="box-style" type="text" name="carbrand" placeholder="Brand" required> <br/><br/>
+        <input formControlName="carmodel" class="box-style" type="text" name="carmodel" placeholder="Model" required> <br/><br/>
+        <input formControlName="license" class="box-style" type="text" name="license" placeholder="License Plate #" required> <br/><br/>
+        <input class="createbutton-style" type="submit" value="Add Car">
+      </div>
+    </div>
+  </form>
+  {{newcarForm.value | json}}
+</div>

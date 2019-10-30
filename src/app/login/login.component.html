@@ -1,0 +1,76 @@
+<style media="screen">
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }
+
+  .username-style{
+    position:absolute;
+    top: 300px;
+    width: 200px;
+    left: 300px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .password-style{
+    position:absolute;
+    top: 340px;
+    width: 200px;
+    left: 300px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .loginbutton-style{
+    position:absolute;
+    top: 380px;
+    left: 380px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .createbutton-style{
+    position:absolute;
+    top: 410px;
+    left: 355px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .header {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    line-height:19;
+  }
+
+</style>
+  <h2 align="center" class="header">Welcome to Driving Assistant!</h2>
+  <div>
+    <form [formGroup]= "loginForm">
+      <div class="row">
+        <div class="col">
+          <input formControlName="username" class= "username-style" type="text" name="username" placeholder="Enter Username Here..." required> <br/><br/>
+          <input formControlName="password" class= "password-style" type="password" name="password" placeholder="Enter Password Here..." required> <br/>
+          <input class="loginbutton-style" type="submit" value="Login">
+          <span class="createbutton-style">
+            <nav>
+              <a href="/newuser"> Create Account </a>
+            </nav>
+          </span>
+        </div>
+      </div>
+    </form>
+    {{loginForm.value | json}}
+  </div>

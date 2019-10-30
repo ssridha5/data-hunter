@@ -1,0 +1,67 @@
+<style media="screen">
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }
+
+  .main-style{
+    position:absolute;
+    top: 300px;
+    width: 200px;
+    left: 300px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .box-style{
+    width: 200px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .create-new-user{
+    position:relative;
+    top: -10px;
+    left: 30px;
+    height: 20px;
+    background-color: white;
+  }
+
+  .createbutton-style{
+    position:absolute;
+    left: 60px;
+  }
+
+  .header {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    line-height:19;
+  }
+</style>
+<h2 align="center" class="header">Welcome to Driving Assistant!</h2>
+<div>
+  <form [formGroup]= "newuserForm">
+    <div class="main-style">
+      <h3 class="create-new-user"> Create New User </h3>
+      <div>
+        <input formControlName="username" class="box-style" type="text" name="username" placeholder="Set Username Here..." required> <br/><br/>
+        <input formControlName="password" class="box-style" type="password" name="password" placeholder="Set Password Here..." required> <br/><br/>
+        <input formControlName="firstname" class="box-style" type="text" name="firstname" placeholder="First Name" required> <br/><br/>
+        <input formControlName="lastname" class="box-style" type="text" name="lastname" placeholder="Last Name" required> <br/><br/>
+        <input class="createbutton-style" type="submit" value="Create User">
+      </div>
+    </div>
+  </form>
+  {{newuserForm.value | json}}
+</div>

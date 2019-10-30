@@ -18,7 +18,7 @@
     position:absolute;
     top: 300px;
     width: 200px;
-    left: 300px;
+    left: 41%;
     height: 20px;
     background-color: white;
   }
@@ -27,7 +27,7 @@
     position:absolute;
     top: 340px;
     width: 200px;
-    left: 300px;
+    left: 41%;
     height: 20px;
     background-color: white;
   }
@@ -35,7 +35,7 @@
   .loginbutton-style{
     position:absolute;
     top: 380px;
-    left: 380px;
+    left: 48%;
     height: 20px;
     background-color: white;
   }
@@ -43,7 +43,7 @@
   .createbutton-style{
     position:absolute;
     top: 410px;
-    left: 355px;
+    left: 45%;
     height: 20px;
     background-color: white;
   }
@@ -57,10 +57,9 @@
 
 </style>
   <h2 align="center" class="header">Welcome to Driving Assistant!</h2>
-  <div>
-    <form [formGroup]= "loginForm">
-      <div class="row">
-        <div class="col">
+  <div text-align:center>
+    <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()">
+      <div>
           <input formControlName="username" class= "username-style" type="text" name="username" placeholder="Enter Username Here..." required> <br/><br/>
           <input formControlName="password" class= "password-style" type="password" name="password" placeholder="Enter Password Here..." required> <br/>
           <input class="loginbutton-style" type="submit" value="Login">
@@ -69,8 +68,6 @@
               <a href="/newuser"> Create Account </a>
             </nav>
           </span>
-        </div>
       </div>
     </form>
-    {{loginForm.value | json}}
   </div>

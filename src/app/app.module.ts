@@ -7,20 +7,25 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NewcarComponent } from './newcar/newcar.component';
 import { NewuserComponent } from './newuser/newuser.component';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DatabaseService } from './database.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NewcarComponent,
-    NewuserComponent
+    NewuserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

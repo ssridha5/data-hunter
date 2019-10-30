@@ -1,0 +1,72 @@
+<style media="screen">
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }
+  .search-style{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    height: 40px;
+    width: 400px;
+  }
+  .dropbtn {
+  background-color: #3CA450;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 300%;
+  border: none;
+}
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right: 150px;
+  top: 5px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 300%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<h2 align="left" class="header">Welcome, {{username}}</h2>
+
+<form [formGroup] = "searchForm" (ngSubmit) = "onSubmit()">
+  <div class="topnav">
+    <input formControlName="query" class= "search-style" type="text" placeholder="Search Destination..." required>
+  </div>
+</form>
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="#">MyProfile</a>
+    <a href="#">MyRoutes </a>
+    <a href="#">MyCars</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</div>

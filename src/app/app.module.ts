@@ -9,7 +9,10 @@ import { NewcarComponent } from './newcar/newcar.component';
 import { NewuserComponent } from './newuser/newuser.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DatabaseService } from './database.service'
+import { DatabaseService } from './database.service';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { MyroutesComponent } from './myroutes/myroutes.component';
+import { MycarsComponent } from './mycars/mycars.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DatabaseService } from './database.service'
     LoginComponent,
     NewcarComponent,
     NewuserComponent,
-    HomeComponent
+    HomeComponent,
+    MyprofileComponent,
+    MyroutesComponent,
+    MycarsComponent
   ],
   imports: [
     BrowserModule,

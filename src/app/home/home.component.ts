@@ -21,13 +21,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.username = Login.getUsername();
+
   }
   onSubmit(){
     console.log(this.searchForm.value.query);
   }
   logout(){
     this.router.navigate(['/login']);
+  }
+  newcar(){
+    this.router.navigate(['/newcar']);
   }
 
 }

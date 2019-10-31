@@ -15,4 +15,11 @@ export class DatabaseService {
 
   }
 
+  createuser(username, password, firstname, lastname){
+
+    var request_data = {username: username, password: password, first_name: firstname, last_name: lastname};
+    return this.http.post("http://datahunter.web.illinois.edu/create", request_data);
+
+  }
+
 }

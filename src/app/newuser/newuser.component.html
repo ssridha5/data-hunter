@@ -51,7 +51,7 @@
 </style>
 <h2 align="center" class="header">Welcome to Driving Assistant!</h2>
 <div>
-  <form [formGroup]= "newuserForm">
+  <form [formGroup]= "newuserForm" (ngSubmit)="onSubmit()">
     <div class="main-style">
       <h3 class="create-new-user"> Create New User </h3>
       <div>

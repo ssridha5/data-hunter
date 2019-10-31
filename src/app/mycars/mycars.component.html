@@ -54,13 +54,7 @@
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
-<h2 align="left" class="header">Welcome, {{username}}</h2>
 
-<form [formGroup] = "searchForm" (ngSubmit) = "onSubmit()">
-  <div class="topnav">
-    <input formControlName="query" class= "search-style" type="text" placeholder="Search Destination..." required>
-  </div>
-</form>
 <div class="dropdown">
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">

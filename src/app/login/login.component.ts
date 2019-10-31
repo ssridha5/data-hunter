@@ -23,10 +23,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    //this.dbs
-      //.validateLogin(this.loginForm.value.username, this.loginForm.value.password)
-      //.subscribe(x => console.log(x));
+    this.dbs
+      .validateLogin(this.loginForm.value.username, this.loginForm.value.password)
+      .subscribe(x => console.log(x));
       this.router.navigate(['/home']);
+  }
+
+  goToNewUser(){
+    this.router.navigate(['/newuser']);
   }
 
   getUsername() {
